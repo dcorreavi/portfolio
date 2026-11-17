@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Manager Portfolio</title>
+    <title>Daniel Correa · Growth Product Manager</title>
+    <meta name="description" content="Daniel Correa Villegas: Growth Product Manager in EdTech and subscription products. Free-to-paid conversion, lifecycle across email, WhatsApp, push and AI agents, and experimentation. Remote from Spain.">
+    <meta property="og:title" content="Daniel Correa · Growth Product Manager">
+    <meta property="og:description" content="Growth, lifecycle and experimentation for EdTech and subscription products. Currently growing a 5M+ learner platform.">
+    <meta property="og:image" content="https://dcorreavi.github.io/portfolio/headshot.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -354,6 +358,125 @@
             font-weight: 700;
         }
 
+
+        /* Work samples */
+        .work-samples {
+            margin-top: 24px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border);
+        }
+        .work-samples-label {
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+        .samples-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 16px;
+        }
+        .sample {
+            margin: 0;
+        }
+        .sample-thumb {
+            display: block;
+            width: 100%;
+            padding: 0;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            overflow: hidden;
+            background: var(--bg);
+            cursor: zoom-in;
+            transition: all 0.3s ease;
+        }
+        .sample-thumb:hover, .sample-thumb:focus-visible {
+            border-color: var(--accent);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            outline: none;
+        }
+        .sample-thumb img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 10;
+            object-fit: cover;
+            object-position: left top;
+            transition: transform 0.4s ease;
+        }
+        .sample-thumb:hover img {
+            transform: scale(1.03);
+        }
+        .sample figcaption {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-top: 8px;
+            line-height: 1.5;
+        }
+        .sample-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .sample-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            border-radius: 100px;
+            background: rgba(233, 69, 96, 0.08);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .sample-link:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            border: none;
+            padding: 0;
+            background: transparent;
+            max-width: min(1200px, 94vw);
+            max-height: 92vh;
+            margin: auto;
+        }
+        .lightbox::backdrop {
+            background: rgba(10, 20, 35, 0.85);
+        }
+        .lightbox img {
+            display: block;
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            margin: 0 auto;
+        }
+        .lightbox-caption {
+            color: white;
+            font-size: 14px;
+            text-align: center;
+            margin-top: 12px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.9);
+            font-size: 20px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
         /* Case Studies */
         .case-studies-grid {
             display: grid;
@@ -488,8 +611,39 @@
         }
 
         .tech-icon {
-            font-size: 32px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin-bottom: 12px;
+        }
+
+        .tech-logo {
+            display: block;
+            width: 36px;
+            height: 36px;
+            background-color: var(--logo-color);
+            -webkit-mask: var(--logo-url) center / contain no-repeat;
+            mask: var(--logo-url) center / contain no-repeat;
+        }
+
+        .tech-logo-img {
+            width: 36px;
+            height: 36px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .tech-logo-generic {
+            display: block;
+            width: 36px;
+            height: 36px;
+            color: var(--primary);
+        }
+
+        .tech-logo-generic svg {
+            width: 100%;
+            height: 100%;
         }
 
         .tech-name {
@@ -594,58 +748,20 @@
                 <img src="headshot.jpg" alt="Daniel Correa Villegas" style="width: 120px; height: 120px; border-radius: 50%; object-fit: cover; margin-bottom: 32px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); display: block;" onerror="this.style.display='none'; document.querySelector('.headshot-fallback').style.display='flex';">
                 <div class="headshot-fallback" style="width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, var(--primary), var(--accent)); margin-bottom: 32px; display: none; align-items: center; justify-content: center; color: white; font-size: 48px; font-weight: 600;">DC</div>
                 <h1>Daniel Correa Villegas</h1>
-                <p class="tagline">Product Manager driving growth through data-driven experimentation and AI-enabled products</p>
-                
-                <div class="header-stats">
-                    <div class="stat-chip">
-                        <span class="stat-number">30%</span>
-                        <span>Avg. Completion Lift</span>
-                    </div>
-                    <div class="stat-chip">
-                        <span class="stat-number">25%</span>
-                        <span>CPL Reduction</span>
-                    </div>
-                    <div class="stat-chip">
-                        <span class="stat-number">50%</span>
-                        <span>Support Cost Cut</span>
-                    </div>
-                </div>
+                <p class="tagline">Growth Product Manager driving conversion and retention through experimentation, lifecycle and AI agents</p>
 
                 <div class="cta-buttons">
-                    <a href="https://www.linkedin.com/in/daniel-correa-v/" class="btn btn-primary" target="_blank">
+                    <a href="https://www.linkedin.com/in/daniel-correa-v/" class="btn btn-primary" target="_blank" rel="noopener">
                         <span>LinkedIn</span>
                         <span>→</span>
                     </a>
-
+                    <a href="mailto:dcorreavi@gmail.com" class="btn btn-secondary">
+                        <span>Email me</span>
+                    </a>
                 </div>
+                <p style="margin-top: 20px; font-size: 14px; color: var(--text-light); opacity: 0; animation: fadeInUp 0.6s ease 0.5s forwards;">Based in Bilbao, Spain · Working remotely across Europe and LatAm · Spanish, English, Russian</p>
             </div>
         </header>
-
-        <!-- PM Principles -->
-        <section class="reveal">
-            <div class="section-header">
-                <div class="section-label">Operating Principles</div>
-                <h2 class="section-title">How I Work</h2>
-            </div>
-            
-            <div class="principles-grid">
-                <div class="principle">
-                    <p class="principle-text"><strong>Data informs, users decide.</strong> I run experiments to validate hypotheses, but qualitative insights reveal why metrics move.</p>
-                </div>
-                <div class="principle">
-                    <p class="principle-text"><strong>Ship fast, iterate faster.</strong> MVPs beat perfect launches. I prioritize learning velocity over feature completeness.</p>
-                </div>
-                <div class="principle">
-                    <p class="principle-text"><strong>Operational efficiency is a product lever.</strong> Reducing CAC or support costs by 20-50% unlocks growth at scale.</p>
-                </div>
-                <div class="principle">
-                    <p class="principle-text"><strong>Cross-functional leadership drives outcomes.</strong> I've hired and led marketing, sales, HR, and support teams to execute launches from scratch.</p>
-                </div>
-                <div class="principle">
-                    <p class="principle-text"><strong>AI is infrastructure, not a feature.</strong> I've launched AI bots, AI-voiced content, and automated workflows that improve core metrics and reduce costs.</p>
-                </div>
-            </div>
-        </section>
 
         <!-- Experience Timeline -->
         <section class="reveal">
@@ -659,10 +775,60 @@
                 <div class="timeline-item">
                     <div class="company-header">
                         <div>
+                            <div class="company-name">Platzi</div>
+                            <div style="font-size: 14px; color: var(--text-light); margin-top: 4px;">Growth Product Manager · 5M+ learners</div>
+                        </div>
+                        <div class="date-range">2026 – Present</div>
+                    </div>
+                    <ul class="achievements">
+                        <li class="achievement">
+                            <div class="achievement-icon">✓</div>
+                            <div class="achievement-text">
+                                Increased purchase conversion by <span class="metric">30%</span> among newly activated learners through iterative experimentation and funnel optimization
+                            </div>
+                        </li>
+                        <li class="achievement">
+                            <div class="achievement-icon">✓</div>
+                            <div class="achievement-text">
+                                Grew leads captured roughly <span class="metric">7x</span> through acquisition-funnel improvements and A/B testing
+                            </div>
+                        </li>
+                        <li class="achievement">
+                            <div class="achievement-icon">✓</div>
+                            <div class="achievement-text">
+                                Own lifecycle communications across email, WhatsApp, mobile push and AI agents, guiding new learners from activation to first purchase
+                            </div>
+                        </li>
+                        <li class="achievement">
+                            <div class="achievement-icon">✓</div>
+                            <div class="achievement-text">
+                                Own acquisition and conversion: event sign-up funnels, B2C free-to-paid subscriptions and referral loops
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="work-samples">
+                        <div class="work-samples-label">See the work</div>
+                        <div class="samples-grid">
+                            <figure class="sample">
+                                <button class="sample-thumb" type="button" data-full="img/platzi-email-gate.jpg" data-caption="In-class email gate at 70% of the first class: the product change behind ~7x more leads captured." aria-label="Enlarge: Platzi in-class prompt: “Ya llevas el 70% de tu primera clase” asking for an email to continue">
+                                    <img src="img/platzi-email-gate.jpg" alt="Platzi in-class prompt: “Ya llevas el 70% de tu primera clase” asking for an email to continue" loading="lazy">
+                                </button>
+                                <figcaption>In-class email gate at 70% of the first class: the product change behind ~7x more leads captured.</figcaption>
+                            </figure>
+                        </div>
+                        <div class="sample-links">
+                            <a class="sample-link" href="https://platzi.com/arma-tu-ruta/" target="_blank" rel="noopener">Live funnel: “Arma tu ruta” learning-path quiz <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="company-header">
+                        <div>
                             <div class="company-name">TripleTen</div>
                             <div style="font-size: 14px; color: var(--text-light); margin-top: 4px;">+10K users</div>
                         </div>
-                        <div class="date-range">Recent</div>
+                        <div class="date-range">2025-2026</div>
                     </div>
                     <ul class="achievements">
                         <li class="achievement">
@@ -677,7 +843,24 @@
                                 Implemented AI-voiced videos resulting in operational efficiencies and reduction of content negative feedback
                             </div>
                         </li>
+                        <li class="achievement">
+                            <div class="achievement-icon">✓</div>
+                            <div class="achievement-text">
+                                Built an AI Lesson Builder that drafts lessons, video scripts and practice exercises, improving operational efficiency and speeding up go-to-market for new courses
+                            </div>
+                        </li>
                     </ul>
+                    <div class="work-samples">
+                        <div class="work-samples-label">See the work</div>
+                        <div class="samples-grid">
+                            <figure class="sample">
+                                <button class="sample-thumb" type="button" data-full="img/tripleten-ai-lesson-builder.jpg" data-caption="AI Lesson Builder: generates lesson content, video scripts and practice exercises, speeding up course production and go-to-market." aria-label="Enlarge: AI Lesson Builder interface showing lesson content, video scripts and practice exercises">
+                                    <img src="img/tripleten-ai-lesson-builder.jpg" alt="AI Lesson Builder interface showing lesson content, video scripts and practice exercises" loading="lazy">
+                                </button>
+                                <figcaption>AI Lesson Builder: generates lesson content, video scripts and practice exercises, speeding up course production and go-to-market.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="timeline-item">
@@ -714,6 +897,17 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="work-samples">
+                        <div class="work-samples-label">See the work</div>
+                        <div class="samples-grid">
+                            <figure class="sample">
+                                <button class="sample-thumb" type="button" data-full="img/skyeng-active-channels.jpg" data-caption="Discovery feed: “Active channels you might like”." aria-label="Enlarge: Skyeng discovery feed: “Active channels you might like”">
+                                    <img src="img/skyeng-active-channels.jpg" alt="Skyeng discovery feed: “Active channels you might like”" loading="lazy">
+                                </button>
+                                <figcaption>Discovery feed: “Active channels you might like”.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="timeline-item">
@@ -775,6 +969,32 @@
             </div>
         </section>
 
+        <!-- PM Principles -->
+        <section class="reveal">
+            <div class="section-header">
+                <div class="section-label">Operating Principles</div>
+                <h2 class="section-title">How I Work</h2>
+            </div>
+            
+            <div class="principles-grid">
+                <div class="principle">
+                    <p class="principle-text"><strong>Data informs, users decide.</strong> I run experiments to validate hypotheses, but qualitative insights reveal why metrics move.</p>
+                </div>
+                <div class="principle">
+                    <p class="principle-text"><strong>Ship fast, iterate faster.</strong> MVPs beat perfect launches. I prioritize learning velocity over feature completeness.</p>
+                </div>
+                <div class="principle">
+                    <p class="principle-text"><strong>Operational efficiency is a product lever.</strong> Reducing CAC or support costs by 20-50% unlocks growth at scale.</p>
+                </div>
+                <div class="principle">
+                    <p class="principle-text"><strong>Cross-functional leadership drives outcomes.</strong> I've hired and led marketing, sales, HR, and support teams to execute launches from scratch.</p>
+                </div>
+                <div class="principle">
+                    <p class="principle-text"><strong>AI is infrastructure, not a feature.</strong> I've launched AI bots, AI-voiced content, AI agents in lifecycle messaging, and automated workflows that improve core metrics and reduce costs.</p>
+                </div>
+            </div>
+        </section>
+
         <!-- Case Studies -->
         <section class="reveal">
             <div class="section-header">
@@ -784,6 +1004,32 @@
             </div>
 
             <div class="case-studies-grid">
+                <!-- Case Study: Platzi -->
+                <div class="case-study-card">
+                    <div class="case-header">
+                        <div class="case-number">Latest</div>
+                        <h3 class="case-title">Free-to-Paid Conversion with Lifecycle &amp; AI Agents</h3>
+                        <div class="case-company">Platzi</div>
+                    </div>
+                    <div class="case-body">
+                        <div class="case-metric-highlight">
+                            <div>
+                                <div class="metric-value">+30%</div>
+                                <div class="metric-label">Purchase Conversion (newly activated learners)</div>
+                            </div>
+                        </div>
+                        <p class="case-description">
+                            Own the path from first visit to first payment on a 5M+ learner platform. Coordinated lifecycle messaging across email, WhatsApp, push and AI agents, and ran an iterative experimentation program on the funnel. Purchase conversion among newly activated learners rose 30%, and leads captured grew roughly 7x.
+                        </p>
+                        <div class="case-tags">
+                            <span class="tag">Growth</span>
+                            <span class="tag">Lifecycle</span>
+                            <span class="tag">AI Agents</span>
+                            <span class="tag">Experimentation</span>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Case Study 1 -->
                 <div class="case-study-card">
                     <div class="case-header">
@@ -873,59 +1119,75 @@
 
             <div class="tech-grid">
                 <div class="tech-item">
-                    <div class="tech-icon">📊</div>
+                    <div class="tech-icon"><span class="tech-logo-generic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><ellipse cx="12" cy="5.5" rx="7.5" ry="3"/><path d="M4.5 5.5v13c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3v-13"/><path d="M4.5 12c0 1.7 3.4 3 7.5 3s7.5-1.3 7.5-3"/></svg></span></div>
                     <div class="tech-name">SQL</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">🐍</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#3776AB; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/python.svg');" role="img" aria-label="Python logo"></span></div>
                     <div class="tech-name">Python</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">📈</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#E97627; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/tableau.svg');" role="img" aria-label="Tableau logo"></span></div>
                     <div class="tech-name">Tableau</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">📉</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#7856FF; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/mixpanel.svg');" role="img" aria-label="Mixpanel logo"></span></div>
                     <div class="tech-name">Mixpanel</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">🤖</div>
+                    <div class="tech-icon"><img class="tech-logo-img" src="https://www.google.com/s2/favicons?sz=128&domain=amplitude.com" alt="Amplitude logo" width="40" height="40" loading="lazy"></div>
+                    <div class="tech-name">Amplitude</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo-generic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="7" width="16" height="12" rx="3"/><path d="M12 7V3.5"/><circle cx="12" cy="3" r="1"/><circle cx="9" cy="13" r="1.3" fill="currentColor"/><circle cx="15" cy="13" r="1.3" fill="currentColor"/><path d="M2 12v3M22 12v3"/></svg></span></div>
+                    <div class="tech-name">AI Agents</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#D97757; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/claude.svg');" role="img" aria-label="Claude logo"></span></div>
+                    <div class="tech-name">Claude</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#25D366; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/whatsapp.svg');" role="img" aria-label="WhatsApp Lifecycle logo"></span></div>
+                    <div class="tech-name">WhatsApp Lifecycle</div>
+                </div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#F7931E; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/scikitlearn.svg');" role="img" aria-label="scikit-learn logo"></span></div>
                     <div class="tech-name">scikit-learn</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">⚙️</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#EA4B71; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/n8n.svg');" role="img" aria-label="n8n logo"></span></div>
                     <div class="tech-name">n8n</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">⚡</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#FF4F00; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/zapier.svg');" role="img" aria-label="Zapier logo"></span></div>
                     <div class="tech-name">Zapier</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">💻</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#F26207; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/replit.svg');" role="img" aria-label="Replit logo"></span></div>
                     <div class="tech-name">Replit</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">🔮</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#D97757; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/claude.svg');" role="img" aria-label="Claude Code logo"></span></div>
                     <div class="tech-name">Claude Code</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">💡</div>
+                    <div class="tech-icon"><img class="tech-logo-img" src="https://www.google.com/s2/favicons?sz=128&domain=lovable.dev" alt="Lovable logo" width="40" height="40" loading="lazy"></div>
                     <div class="tech-name">Lovable</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">🧠</div>
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#000000; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/openai.svg');" role="img" aria-label="ChatGPT logo"></span></div>
                     <div class="tech-name">ChatGPT</div>
                 </div>
                 <div class="tech-item">
-                    <div class="tech-icon">🚀</div>
+                    <div class="tech-icon"><img class="tech-logo-img" src="https://www.google.com/s2/favicons?sz=128&domain=antigravity.google" alt="Antigravity logo" width="40" height="40" loading="lazy"></div>
                     <div class="tech-name">Antigravity</div>
                 </div>
-                 <div class="tech-item">
-                    <div class="tech-icon">🎨</div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#F24E1E; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/figma.svg');" role="img" aria-label="Figma logo"></span></div>
                     <div class="tech-name">Figma</div>
                 </div>
-                                 <div class="tech-item">
-                    <div class="tech-icon">🔄</div>
+                <div class="tech-item">
+                    <div class="tech-icon"><span class="tech-logo" style="--logo-color:#0052CC; --logo-url:url('https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/jira.svg');" role="img" aria-label="Jira logo"></span></div>
                     <div class="tech-name">Jira</div>
                 </div>
             </div>
@@ -936,18 +1198,24 @@
             <div class="footer-content">
                 <h2 class="footer-title">Let's Talk</h2>
                 <p class="footer-text">
-                    Open to Product Manager roles in B2C/B2B EdTech, Growth, AI products, and LatAm expansion. 
-                    Looking to bring data-driven experimentation and operational rigor to your team.
+                    Open to Product, Growth and Lifecycle roles in EdTech, consumer subscription and SaaS, especially Spanish-speaking and LatAm markets.
+                    Remote from Spain, bringing data-driven experimentation and operational rigor to your team.
                 </p>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/daniel-correa-v/" class="footer-link" target="_blank">LinkedIn</a>
-                    <a href="/cdn-cgi/l/email-protection#cda9aea2bfbfa8acbba48daaa0aca4a1e3aea2a0" class="footer-link">Email</a>
+                    <a href="https://www.linkedin.com/in/daniel-correa-v/" class="footer-link" target="_blank" rel="noopener">LinkedIn</a>
+                    <a href="mailto:dcorreavi@gmail.com" class="footer-link">dcorreavi@gmail.com</a>
                 </div>
             </div>
         </footer>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <dialog class="lightbox" id="lightbox" aria-label="Work sample">
+        <button class="lightbox-close" type="button" aria-label="Close">×</button>
+        <img src="" alt="">
+        <p class="lightbox-caption"></p>
+    </dialog>
+
+    <script>
         // Scroll reveal animation
         const observerOptions = {
             threshold: 0.1,
@@ -964,5 +1232,34 @@
 
         document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
+        // Work-sample lightbox
+        const lightbox = document.getElementById('lightbox');
+        if (lightbox && typeof lightbox.showModal === 'function') {
+            const lbImg = lightbox.querySelector('img');
+            const lbCap = lightbox.querySelector('.lightbox-caption');
+            document.querySelectorAll('.sample-thumb').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    lbImg.src = btn.dataset.full;
+                    lbImg.alt = btn.querySelector('img').alt;
+                    lbCap.textContent = btn.dataset.caption;
+                    lightbox.showModal();
+                });
+            });
+            lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+            lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.close(); });
+        } else {
+            document.querySelectorAll('.sample-thumb').forEach(btn => {
+                btn.addEventListener('click', () => window.open(btn.dataset.full, '_blank'));
+            });
+        }
+
         // Smooth scroll for links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor =
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', e => {
+                const target = document.querySelector(anchor.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>
