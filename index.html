@@ -1115,21 +1115,30 @@
         onScroll();
 
         // Active section in nav
-        const links = [...document.querySelectorAll('.nav a')];
-        const byId = Object.fromEntries(links.map(a => [a.getAttribute('href').slice(1), a]));
-        const sectionObserver = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    links.forEach(a => a.classList.remove('active'));
-                    const link = byId[entry.target.id];
-                    if (link) {
-                        link.classList.add('active');
-                        link.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-                    }
-                }
-            });
-        }, { rootMargin: '-45% 0px -50% 0px' });
-        document.querySelectorAll('main section[id]').forEach(s => sectionObserver.observe(s));
+        
+// Active section in nav
+const links = [...document.querySelectorAll('.nav a')];
+const byId = Object.fromEntries(
+    links.map(a => [a.getAttribute('href').slice(1), a])
+);
+
+const sectionObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            links.forEach(a => a.classList.remove('active'));
+
+            const link = byId[entry.target.id];
+            if (link) {
+                link.classList.add('active');
+            }
+        }
+    });
+}, { rootMargin: '-45% 0px -50% 0px' });
+
+document.querySelectorAll('main section[id]').forEach(s => {
+    sectionObserver.observe(s);
+});
+
 
         // Work-sample lightbox
         const lightbox = document.getElementById('lightbox');
